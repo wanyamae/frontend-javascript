@@ -2,16 +2,16 @@
 
 namespace Subjects {
     export interface Teacher {
-        experienceTeachingC?: number;
+        experienceTeachingJava?: number;
     }
 
-    export class Cpp extends Subject {
+    export class Java extends Subject {
         getRequirements(): string {
-            return 'Here is the list of requirements for Cpp';
+            return 'Here is the list of requirements for Java';
         }
 
         getAvailableTeacher(): string {
-            if (this.teacher && (this.teacher.experienceTeachingC || 0) > 0) {
+            if (this.teacher && (this.teacher.experienceTeachingJava || 0) > 0) {
                 return `Available Teacher: ${this.teacher.firstName}`;
             }
             return 'No available teacher';
